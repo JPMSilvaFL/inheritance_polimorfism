@@ -8,10 +8,15 @@ public final class ImportedProduct extends Product {
 		this.customsFee = customsFee;
 	}
 
+	public Double totalPrice() {
+		Double totalPrice = price + customsFee;
+		return totalPrice;
+	}
+
 	@Override
 	public final String priceTag() {
 		StringBuilder sBuilder = new StringBuilder();
-		sBuilder.append(name + " $" + price + " (Customs fee: $ " + customsFee);
+		sBuilder.append(name + " $" + totalPrice() + " (Customs fee: $ " + customsFee + ")");
 		return sBuilder.toString();
 	}
 }

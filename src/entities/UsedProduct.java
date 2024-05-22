@@ -12,7 +12,7 @@ public final class UsedProduct extends Product {
 
 	public final String priceTag() {
 		StringBuilder sBuilder = new StringBuilder();
-		sBuilder.append(name + " $" + price + " (Manufacture Date: $ " + manufactureDate);
+		sBuilder.append(name + " $" + price + " (Manufacture Date: " + manufactureDate + ")");
 		return sBuilder.toString();
 	}
 }
